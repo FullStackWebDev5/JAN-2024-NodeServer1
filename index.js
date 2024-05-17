@@ -37,7 +37,10 @@ const USERS = [
 ]
 
 app.get('/', (req, res) => {
-  res.send('LANDING PAGE')
+  res.json({
+    status: 'SUCCESS',
+    time: new Date()
+  })
 })
 
 app.get('/users', (req, res) => {
